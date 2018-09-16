@@ -36,6 +36,25 @@ Normally, using a decision tree or logistic regression as a bench mark, I use de
 
 ##### Precision: *(also called positive predictive value) is the fraction of relevant instances among the retrieved instances*
 ##### Recall: *(also known as sensitivity) is the fraction of relevant instances that have been retrieved over the total amount of relevant instances.*
-##### AUC: *AUC is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming 'positive' ranks higher than 'negative')*
+##### AUC: *AUC is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one*
 
 So from the result we can find that the normal dataset get the highest precision, which means the data without over or down sampling is fine to feed to prediction model. In the same time, it gets the lowest recall which means the ability of find out all positive value ('1') is less than the others. It's make sance because other dataset had balanced before sent to the model, the minority data percentage increased.
+
+### 4. Other algorithms can be use
+In this section, I introduced two other ensembling algorithms, bagging and boosting. The reason why I introduc these two algorithms is because these two algorithms are not that sensitive to the imbalance data. So I use these two algorithms compare with the decision tree algorithm with normal data to see the result better or not. 
+
+Bagging, developed by Breiman(1996), is a machine-learning method that uses boostrapping to creat multiple training datasets from given datasets. Random forest algorithms is a typical bagging algorithm.
+
+Boosting, especially the populer one AdaBoosting, proposed by Freund and Schapire(1996) is a sequential learning method. It on the basis of supervised learning, weights are successively adjusted and multiple learning results are sought.
+
+*  Ada-Boost algorithm 
+*  Random Forest algorithm
+
+| Algorithm Used			        |    AUC	      | Precision   | Recall    |  
+|:---------------------:|:---------------------------------------------:|:-----------:|:-----------:| 
+| Decision Tree algorithm   		|0.71 |0.62  |  0.54|
+| Ada-Boost algorithm      		|0.759 |0.69  | 0.31 |
+| Random Forest algorithm   		|0.761 | 0.65|  0.36|
+
+From the result we can see the Ada-Boost and RF algorithm has better accuracy than the benchmark algorithm, it show their ability to handle the imbalance dataset.
+
