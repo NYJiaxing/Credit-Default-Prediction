@@ -14,11 +14,15 @@ In data exploration, I using python Pandas package import the data from CSV file
       * In this dataset has 30000 rows data and 25 features.
       * All of the features had already digitalized before I downloaded it
       * There is no missing value in the dataset
-      * The ground truth result, is slightly imbalanced
-(/images/data_exp_2.png)
+      * The ground truth result, is slightly imbalanced (77% of data is positive, 23% of data is negative)
 
+![](/images/data_exp_2.png)
 
+### 2. Data Preprocessing
+In data preprocessing, I try three method to overcome the imbalance dataset:
+      * Over-sampling, randomly create more data to minority data to ensure the two data is balanced
+      * Down-sampling, randomly delete data from majority data to ensure the two data is balanced
+      * SMOTE Algorithm, using KNN algorithm to find nearest data around the minority data to make two dataset balanced
+      
+      
 
-After I explore the whole dataset, I found the ground truth of the prediction is not perfectly balanced. 77% of the result is '0', which means the consumer didn't pay the bill, 23% of the consumer pay the bill. Normally, the imbalance dataset has the 8:1 ratio of positive and negative result, in this case is only 3:1. 
-
-But I still discuess three imbalance dataset dealing method in my notebook. Over-sampling minority data, down-sampling majority data and using SMOTE algorithm to synthetic data.
