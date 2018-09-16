@@ -11,18 +11,23 @@ In this project, I'll follow the below process, based on the data we have to pre
 
 ### 1. Data Exploration
 In data exploration, I using python Pandas package import the data from CSV file. And using matplotlib and seaborn package visualize the dataset. Follow result is found after the exploration:
-      * In this dataset has 30000 rows data and 25 features.
-      * All of the features had already digitalized before I downloaded it
-      * There is no missing value in the dataset
-      * The ground truth result, is slightly imbalanced (77% of data is positive, 23% of data is negative)
+* In this dataset has 30000 rows data and 25 features.
+* All of the features had already digitalized before I downloaded it
+* There is no missing value in the dataset
+* The ground truth result, is slightly imbalanced (77% of data is positive, 23% of data is negative)
 
 ![](/images/data_exp_2.png)
 
 ### 2. Data Preprocessing
 In data preprocessing, I try three method to overcome the imbalance dataset:
-      * Over-sampling, randomly create more data to minority data to ensure the two data is balanced
-      * Down-sampling, randomly delete data from majority data to ensure the two data is balanced
-      * SMOTE Algorithm, using KNN algorithm to find nearest data around the minority data to make two dataset balanced
+* Over-sampling, randomly create more data to minority data to ensure the two data is balanced
+* Down-sampling, randomly delete data from majority data to ensure the two data is balanced
+* SMOTE Algorithm, using KNN algorithm to find nearest data around the minority data to make two dataset balanced
+      
+### 3. Prediction with Machine Learning Modeling
+Normally, using a decision tree or logistic regression as a bench mark, I send four different training data into the same model, downloaded data from UCI dataset, oversampled data, downsampled data and SMOTE data. Then I use confusion matrix, ROC and AUC as evaluation standard to figure out which balancing data method is better.
+
+
       
       
 
