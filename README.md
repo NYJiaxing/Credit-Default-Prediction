@@ -15,7 +15,7 @@ In data exploration, I using python Pandas package import the data from CSV file
       * All of the features had already digitalized before I downloaded it
       * There is no missing value in the dataset
       * The ground truth result, is slightly imbalanced
-
+(/images/data_exp_2.png)
 
 
 
